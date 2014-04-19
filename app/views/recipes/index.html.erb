@@ -1,5 +1,6 @@
+<div class="all-recipes" ng-controller="RecipeListCtrl">
 <h1>Listing recipes</h1>
-<div ng-controller="RecipeListCtrl">
+
   <label>Name:</label>
   <input id="search" type="text" ng-model="query" />
 
@@ -23,6 +24,23 @@
       <td ng-click="showRecipe(recipe.id)">{{recipe.name}}</td>
   </tbody>
 </table>
+
+<div class="hidden" recipe-view="" id="recipe">
+  <p>
+    <strong>Name:</strong>
+    {{currentRecipe.name}}
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    {{currentRecipe.description}}
+  </p>
+
+  <p>
+    <strong>Prep instructions:</strong>
+    {{currentRecipe.prep_instructions}}
+  </p>
+</div>
 
 <br>
 </div>
