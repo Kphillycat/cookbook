@@ -40,6 +40,13 @@
     <strong>Prep instructions:</strong>
     {{currentRecipe.prep_instructions}}
   </p>
+
+  <ul class="ingredients">
+    <li ng-repeat="ingredient in currentRecipe.ingredients">
+      <p>{{ingredient.quantity}} {{ingredient.unit}} of {{ingredient.name}}</p>
+    </li>
+  </ul>
+
 </div>
 
 <br>
