@@ -1,41 +1,26 @@
 <div class="jumbo">  
-  <h1>Intergalactic Space Cat Registry</h1>
+  <h1>Enter Recipe</h1>
 </div>
-<form method="POST" action="http://localhost:9393/spacecats">
+<form method="POST" action="http://localhost:3000/spacecats">
   <div>
     <label for="name">Name:</label>
     <input type="text" name="name"/>
   </div>
 
   <div>
-    <label for="bio">Bio:</label>
-    <input type="text" name="bio"/>
+    <label for="description">Description:</label>
+    <input type="text" name="description"/>
   </div>
 
   <div>
-    <label for="color">Color</label>
-    <select name="color">
-      <option value="white">White</option>
-      <option value="grey">Grey</option>
-      <option value="brown">Brown</option>
-      <option value="other">Other</option>
-    </select>
+    <label for="ingredients">Ingredients:</label>
+    <textarea type="text" name="ingredients"/>
   </div>
 
   <div>
-    <label for="personality">Personality</label>
-    <select name="personality">
-      <option value="relaxed">Relaxed</option>
-      <option value="nervous">Nervous</option>
-      <option value="aggressive">Aggressive</option>
-      <option value="other">Other</option>
-    </select>
+    <label for="prep_instructions">Instructions:</label>
+    <textarea type="text" name="prep_instructions"/>
   </div>
 
-  <div>
-    <label for="planets">Planets Visited</label>
-    <input type="number" name="planets"/>
-  </div>
-
-  <button type="submit">Register New Spacecat</button>
+  <button type="submit">New Recipe!</button>
 </form>

@@ -8,34 +8,34 @@
 //2 items, these are the modules that the
 //app depends on
 // ngRoutes - allows us to use angular-route.js
-// spacecatControllers - al
-var spacecatApp = angular.module('spacecatApp', [
+// recipeControllers - al
+var recipeApp = angular.module('recipeApp', [
   'ngRoute',
-  'spacecatControllers',
-  'spacecatFilters',
-  'spacecatServices'
+  'recipeControllers',
+  'recipeFilters',
+  'recipeServices'
 ]);
 
-spacecatApp.config(['$routeProvider',
+recipeApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      when('/cats', {
-        templateUrl: 'partials/cat-list.html',
-        controller: 'CatListCtrl'
+      when('/recipes', {
+        templateUrl: 'partials/recipe-list.html',
+        controller: 'RecipeListCtrl'
       }).
       when('/dashboard', {
-        templateUrl: 'partials/cat-dashboard.html',
-        controller: 'CatListCtrl'
+        templateUrl: 'partials/recipe-dashboard.html',
+        controller: 'RecipeListCtrl'
       }).
       when('/new', {
-        templateUrl: 'partials/cat-form.html',
-        controller: 'CatListCtrl'
+        templateUrl: 'partials/recipe-form.html',
+        controller: 'RecipeListCtrl'
       }).
-      when('/cats/:catId', {
-        templateUrl: 'partials/cat-detail.html',
-        controller: 'CatDetailCtrl'
+      when('/recipes/:recipeId', {
+        templateUrl: 'partials/recipe-detail.html',
+        controller: 'RecipeDetailCtrl'
       }).
       otherwise({
-        redirectTo: '/cats'
+        redirectTo: '/recipes'
       });
   }]);
