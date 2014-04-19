@@ -17,10 +17,9 @@ class RecipesController < ApplicationController
   # GET /recipes/1.json
   def show
     @recipe = Recipe.find(params[:id])
-    # debugger
     respond_to do |format|
       format.html {render :index}
-      format.json { render :json => @recipe, :json => @recipe.ingredients }
+      format.json {render :json => @recipe.to_json(:include => [:ingredients])}
     end
   end
 
