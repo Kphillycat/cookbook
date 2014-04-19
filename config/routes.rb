@@ -11,6 +11,11 @@ Cookbook::Application.routes.draw do
   root "recipes#index"
   resources :recipes
 
+  scope :api do
+    get "/recipes(.:format)" => "recipes#index"
+    get "/recipes/:id(.:format)" => "recipes#show"
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

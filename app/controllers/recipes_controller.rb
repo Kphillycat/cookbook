@@ -7,9 +7,9 @@ class RecipesController < ApplicationController
   def index
     @recipes = Recipe.all
 
-    respond_to do |format|
-      format.json { render :json => @recipes }
-    end
+    # respond_to do |format|
+    #   format.json { render :json => @recipes }
+    # end
   end
 
   # GET /recipes/1
