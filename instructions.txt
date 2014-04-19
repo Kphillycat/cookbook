@@ -1,0 +1,15 @@
+Write a small rails app that incorporates angularjs to do the following:
+provide a simple rails CRUD interface for entering recipes, each of which includes:
+  a name
+  a description
+  a list of ingredients, each of which includes:
+    a unit
+    a quantity
+    a name
+  preparation instructions
+
+- on the view screen for a recipe, use angularjs to allow a user to scale the recipe allow for 0.5x increments, from 0.5 to 5
+
+extra credit:
+  allow the user to enter/c&p an entire list of ingredients into a free-flowing text box, and parse them out!  super-slick!
+prettiness optional - won’t be graded on style but it is always apprecaited.
