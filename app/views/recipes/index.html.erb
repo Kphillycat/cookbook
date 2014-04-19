@@ -21,11 +21,15 @@
       <td>{{recipe.name}}</td>
       <td>{{recipe.description}}</td>
       <td>{{recipe.prep_instructions}}</td>
-      <td ng-click="showRecipe(recipe.id)">{{recipe.name}}</td>
+      <td ng-click="showRecipe(recipe.id)"><a href="#">Click for Details</a></td>
   </tbody>
 </table>
 
 <div class="hidden" recipe-view="" id="recipe">
+
+  <label for="serving-scale">Scale up</label>
+  <input id="serving-scale" ng-model="scale" type="number" min="1" max="10" step="0.5" value="1" /> 
+
   <p>
     <strong>Name:</strong>
     {{currentRecipe.name}}
@@ -43,7 +47,7 @@
 
   <ul class="ingredients">
     <li ng-repeat="ingredient in currentRecipe.ingredients">
-      <p>{{ingredient.quantity}} {{ingredient.unit}} of {{ingredient.name}}</p>
+      <p>{{ingredient.quantity * (scale || 1)}} {{ingredient.unit}} of {{ingredient.name}}</p>
     </li>
   </ul>
 
