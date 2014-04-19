@@ -7,7 +7,7 @@ Cookbook::Application.routes.draw do
   get "api", :to => proc { [404, {}, ['Invalid API endpoint']] }
   get "api/*path", :to => proc { [404, {}, ['Invalid API endpoint']] }
 
-  get "/*path", :to => redirect("/?goto=%{path}")
+  # get "/*path", :to => redirect("/?goto=%{path}")
 
   # resources :recipes
 
