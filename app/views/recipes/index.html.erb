@@ -1,4 +1,8 @@
 <h1>Listing recipes</h1>
+<div ng-controller="RecipeListCtrl">
+  <label>Name:</label>
+  <input id="search" type="text" ng-model="query" />
+</div>
 
 <table>
   <thead>
@@ -12,17 +16,12 @@
     </tr>
   </thead>
 
-  <tbody>
-    <% @recipes.each do |recipe| %>
-      <tr>
-        <td><%= recipe.name %></td>
-        <td><%= recipe.description %></td>
-        <td><%= recipe.prep_instructions %></td>
-        <td><%= link_to 'Show', recipe %></td>
-        <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-        <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+  <tbody class="recipes">
+    <tr ng-repeat="recipe in recipes | filter:query | orderBy:orderProp" class="cat">
+      <td>{{recipe.name}}</td>
+      <td>{{recipe.description}}</td>
+      <td>{{recipe.prep_instructions}}</td>
+      <td><a ng-href="#/recipes/{{recipe.id}}"><h3>{{recipe.name}}</h3></a></td>
   </tbody>
 </table>
 

@@ -4,12 +4,16 @@
   <title>Cookbook</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js" %>
+  <%= javascript_include_tag src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-resource.min.js" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    Your Cookbook!
+  </header>
 
-<%= yield %>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-resource.min.js"></script>
+  <%= yield %>
+
 </body>
 </html>
