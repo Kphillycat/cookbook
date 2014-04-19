@@ -2,10 +2,10 @@
 
 var recipeControllers = angular.module('recipeControllers', []);
 
-recipeApp.controller('RecipeListCtrl', ['$scope', 'Recipe',
-  function($scope, Recipe){
+recipeApp.controller('RecipeListCtrl', ['$scope', '$http', 'Recipe',
+  function($scope, $http, Recipe){
     $http.get('http://localhost:3000/recipes.json').success(function(data) {
-     $scope.recipes = data;
+      $scope.recipes = data;
     });
  
     // $scope.recipes = Recipe.query();

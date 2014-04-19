@@ -9,33 +9,35 @@
 //app depends on
 // ngRoutes - allows us to use angular-route.js
 // recipeControllers - al
-var recipeApp = angular.module('recipeApp', [
-  'ngRoute',
-  'recipeControllers',
-  'recipeFilters',
-  'recipeServices'
-]);
+// var recipeApp = angular.module('recipeApp', [
+//   'ngRoute',
+//   'recipeControllers',
+//   'recipeFilters',
+//   'recipeServices'
+// ]);
 
-recipeApp.config(['$routeProvider',
-  function($routeProvider) {
-    $routeProvider.
-      when('/recipes', {
-        templateUrl: 'partials/recipe-list.html',
-        controller: 'RecipeListCtrl'
-      }).
-      when('/dashboard', {
-        templateUrl: 'partials/recipe-dashboard.html',
-        controller: 'RecipeListCtrl'
-      }).
-      when('/new', {
-        templateUrl: 'partials/recipe-form.html',
-        controller: 'RecipeListCtrl'
-      }).
-      when('/recipes/:recipeId', {
-        templateUrl: 'partials/recipe-detail.html',
-        controller: 'RecipeDetailCtrl'
-      }).
-      otherwise({
-        redirectTo: '/recipes'
-      });
-  }]);
+var recipeApp = angular.module('recipeApp',['recipeControllers', 'recipeServices']);
+
+// recipeApp.config(['$routeProvider',
+//   function($routeProvider) {
+//     $routeProvider.
+//       when('/recipes', {
+//         templateUrl: 'partials/recipe-list.html',
+//         controller: 'RecipeListCtrl'
+//       }).
+//       when('/dashboard', {
+//         templateUrl: 'partials/recipe-dashboard.html',
+//         controller: 'RecipeListCtrl'
+//       }).
+//       when('/new', {
+//         templateUrl: 'partials/recipe-form.html',
+//         controller: 'RecipeListCtrl'
+//       }).
+//       when('/recipes/:recipeId', {
+//         templateUrl: 'partials/recipe-detail.html',
+//         controller: 'RecipeDetailCtrl'
+//       }).
+//       otherwise({
+//         redirectTo: '/recipes'
+//       });
+//   }]);
