@@ -9,13 +9,19 @@ class RecipesController < ApplicationController
 
     respond_to do |format|
       format.html {render :index}
-      format.json { render :json => @recipes }
+      format.json {render :json => @recipes }
     end
   end
 
   # GET /recipes/1
   # GET /recipes/1.json
   def show
+    @recipe = Recipe.find(params[:id])
+    # debugger
+    respond_to do |format|
+      format.html {render :index}
+      format.json { render :json => @recipe, :json => @recipe.ingredients }
+    end
   end
 
   # GET /recipes/new

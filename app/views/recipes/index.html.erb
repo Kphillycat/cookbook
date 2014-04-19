@@ -3,7 +3,6 @@
   <label>Name:</label>
   <input id="search" type="text" ng-model="query" />
 
-
 <table>
   <thead>
     <tr>
@@ -17,11 +16,11 @@
   </thead>
 
   <tbody class="recipes">
-    <tr ng-repeat="recipe in recipes | filter:query | orderBy:orderProp" class="cat">
+    <tr ng-repeat="recipe in recipes | filter:query | orderBy:orderProp" class="recipe">
       <td>{{recipe.name}}</td>
       <td>{{recipe.description}}</td>
       <td>{{recipe.prep_instructions}}</td>
-      <td><a ng-href="#/recipes/{{recipe.id}}"><h3>{{recipe.name}}</h3></a></td>
+      <td ng-click="showRecipe(recipe.id)">{{recipe.name}}</td>
   </tbody>
 </table>
 

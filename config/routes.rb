@@ -14,6 +14,7 @@ Cookbook::Application.routes.draw do
   scope :api do
     get "/recipes(.:format)" => "recipes#index"
     get "/recipes/:id(.:format)" => "recipes#show"
+    get "/recipes/:id(.:format)/ingredients" => "ingredients#show"
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
