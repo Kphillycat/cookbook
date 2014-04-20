@@ -14,26 +14,26 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-04-20T10:57:19-04:00">2014-04-20T10:57:19-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-04-20T11:46:57-04:00">2014-04-20T11:46:57-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">78.45%</span></span>
+    (<span class="covered_percent"><span class="red">79.17%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.85
+         0.92
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>22</b> files in total.
-    <b>116</b> relevant lines. 
-    <span class="green"><b>91</b> lines covered</span> and
+    <b>23</b> files in total.
+    <b>120</b> relevant lines. 
+    <span class="green"><b>95</b> lines covered</span> and
     <span class="red"><b>25</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -67,7 +67,7 @@
         <td>40</td>
         <td>21</td>
         <td>19</td>
-        <td>1.0</td>
+        <td>1.4</td>
       </tr>
       
       <tr>
@@ -241,13 +241,23 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#c957c9c89dc0acab37f182a3f7891ad943539c1a" class="src_link" title="features/step_definitions/scaling_recipes.rb">features/step_definitions/scaling_recipes.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>7</td>
+        <td>4</td>
+        <td>4</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#8b71f72e8c977e28753b049b894b3ea893582b50" class="src_link" title="features/step_definitions/viewing_recipe_details.rb">features/step_definitions/viewing_recipe_details.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>9</td>
+        <td>8</td>
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>1.4</td>
       </tr>
       
       <tr>
@@ -257,7 +267,7 @@
         <td>8</td>
         <td>8</td>
         <td>0</td>
-        <td>1.5</td>
+        <td>2.0</td>
       </tr>
       
       <tr>
@@ -390,8 +400,8 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="8">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="8">
+          <span class="hits">6</span>
           
           <code class="ruby">    @recipes = Recipe.all</code>
         </li>
@@ -402,20 +412,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="10">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="10">
+          <span class="hits">6</span>
           
           <code class="ruby">    respond_to do |format|</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="11">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="9" data-linenumber="11">
+          <span class="hits">9</span>
           
           <code class="ruby">      format.html {render :index}</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="12">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="9" data-linenumber="12">
+          <span class="hits">9</span>
           
           <code class="ruby">      format.json {render :json =&gt; @recipes }</code>
         </li>
@@ -456,26 +466,26 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="19">
+          <span class="hits">2</span>
           
           <code class="ruby">    @recipe = Recipe.find(params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="20">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="20">
+          <span class="hits">2</span>
           
           <code class="ruby">    respond_to do |format|</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="21">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="21">
+          <span class="hits">2</span>
           
           <code class="ruby">      format.html {render :index}</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="22">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="22">
+          <span class="hits">4</span>
           
           <code class="ruby">      format.json {render :json =&gt; @recipe.to_json(:include =&gt; [:ingredients])}</code>
         </li>
@@ -810,8 +820,8 @@
           <code class="ruby">    def set_recipe</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="78">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="78">
+          <span class="hits">2</span>
           
           <code class="ruby">      @recipe = Recipe.find(params[:id])</code>
         </li>
@@ -2596,6 +2606,66 @@
   </pre>
 </div>
       
+        <div class="source_table" id="c957c9c89dc0acab37f182a3f7891ad943539c1a">
+  <div class="header">
+    <h3>features/step_definitions/scaling_recipes.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">When(/^I enter in the number &quot;(.*?)&quot;$/) do |num|</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  fill_in &quot;serving-scale&quot;, :with =&gt; num</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">Then(/^I expect to see the recipe scale up by a factor of &quot;(.*?)&quot;$/) do |num|</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  expect(page).to have_content(&quot;#{num.to_i * @recipe.ingredients[0].quantity} #{@recipe.ingredients[0].unit.pluralize(num)} of #{@recipe.ingredients[0].name}&quot;)  </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
         <div class="source_table" id="8b71f72e8c977e28753b049b894b3ea893582b50">
   <div class="header">
     <h3>features/step_definitions/viewing_recipe_details.rb</h3>
@@ -2616,16 +2686,16 @@
           <code class="ruby">When(/^I click on the details link$/) do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="2">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="2">
+          <span class="hits">2</span>
           
           <code class="ruby">  page.find(&quot;#recipe-detail-link&quot;).click</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="3">
+        <li class="covered" data-hits="2" data-linenumber="3">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby">  # click_link &quot;recipe-detail-link&quot;</code>
+          <code class="ruby">  save_and_open_page</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
@@ -2649,16 +2719,10 @@
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">  save_and_open_page</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
-          
           <code class="ruby">  expect(page).to have_content &quot;Delicious Pizza Pie&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby">end</code>
@@ -2688,20 +2752,20 @@
           <code class="ruby">Given(/^There are recipes$/) do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="2">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="2">
+          <span class="hits">3</span>
           
           <code class="ruby">  @recipe = FactoryGirl.create(:recipe)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="3">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="3">
+          <span class="hits">3</span>
           
           <code class="ruby">  @ingredient = FactoryGirl.create(:ingredient)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="4">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="4">
+          <span class="hits">3</span>
           
           <code class="ruby">  @recipe.ingredients &lt;&lt; @ingredient</code>
         </li>
@@ -2724,8 +2788,8 @@
           <code class="ruby">When(/^I&#39;m on the home page$/) do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="8">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="8">
+          <span class="hits">3</span>
           
           <code class="ruby">  visit root_path</code>
         </li>

@@ -1,6 +1,6 @@
 Feature: Generating a code coverage report
   In order to correctly view our initial code coverage
-  As a student of web development
+  As the developer of this web application
   I want to encourage simplecov to correctly analyze our test suite
 
   Scenario: Viewing our initial code coverage
