@@ -10,6 +10,6 @@ recipeApp.directive('recipeDetail', function() {
 recipeApp.filter('fraction', function fractionFilter() {
   return function(input) {
     var f = new Fraction(parseFloat(input)); 
-    return f.numerator + "/" + f.denominator;
+    return f.numerator == f.denominator ? input : f.numerator + "/" + f.denominator;
   }
 });
