@@ -25,10 +25,8 @@
   </div>
  
   <%= f.fields_for :ingredients do |ingredients_form| %>
-    <div class="field">
-      <%= ingredients_form.label :ingredients %><br>
+      <%= ingredients_form.label :ingredients, "Add ingredients separated by commas (ex: 1 cup sugar, 2 cups butter, etc.)" %><br>
       <%= ingredients_form.text_area :ingredients %>
-    </div>
   <%end%>
 
   <div class="actions">
