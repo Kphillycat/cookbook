@@ -1,1 +1,1 @@
-A rails app that allows users to save their favorite recipes and scale them up based on serving size.
+A rails app that allows users to save their favorite recipes and scale them up based on serving size. See working demo here: http://simuleatia.herokuapp.com/

@@ -1,26 +1,26 @@
 <div class="recipe-details">
 
-    <label for="serving-scale">Enter Scaling amount</label>
-    <input id="serving-scale" ng-model="scale" type="number" min="1" max="10" step="0.5" value="1" /> 
+  <label for="serving-scale">Enter Scaling amount</label>
+  <input id="serving-scale" ng-model="scale" type="number" min="1" max="10" step="0.5" value="1" /> 
 
-    <p>
-      <strong>Name:</strong>
-      {{currentRecipe.name}}
-    </p>
+  <p>
+    <strong>Name:</strong>
+    {{currentRecipe.name}}
+  </p>
 
-    <p>
-      <strong>Description:</strong>
-      {{currentRecipe.description}}
-    </p>
+  <p>
+    <strong>Description:</strong>
+    {{currentRecipe.description}}
+  </p>
 
-    <p>
-      <strong>Preparation instructions:</strong>
-      {{currentRecipe.prep_instructions}}
-    </p>
+  <p>
+    <strong>Preparation instructions:</strong>
+    {{currentRecipe.prep_instructions}}
+  </p>
 
-    <ul class="ingredients">
-      <li ng-repeat="ingredient in currentRecipe.ingredients">
-        <p>{{ingredient.quantity * (scale || 1)}} {{ingredient.unit}} of {{ingredient.name}}</p>
-      </li>
-    </ul>
-  </div>
+  <ul class="ingredients">
+    <li ng-repeat="ingredient in currentRecipe.ingredients">
+      <p>{{ingredient.quantity * (scale || 1)}} {{ingredient.unit}} of {{ingredient.name}}</p>
+    </li>
+  </ul>
+</div>
