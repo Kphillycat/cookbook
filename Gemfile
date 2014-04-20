@@ -56,4 +56,5 @@ group :development, :test do
   gem 'pry'
   gem 'simplecov', '~> 0.7.1', require: false
   gem 'faker'
+  gem 'selenium-webdriver'
 end

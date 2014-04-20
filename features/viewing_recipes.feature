@@ -3,6 +3,7 @@ Feature: Viewing Recipes
   As a user
   I would like to goto the home page and see all the recipes
 
+@javascript
   Scenario: 
     Given There are recipes
     When I'm on the home page
