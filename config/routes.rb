@@ -1,13 +1,9 @@
 Cookbook::Application.routes.draw do
   
-  # get '/', :to => redirect('/app/index.html')
-
-  # get "/api/recipes", :to => "recipes#index"
-
   # get "api", :to => proc { [404, {}, ['Invalid API endpoint']] }
   # get "api/*path", :to => proc { [404, {}, ['Invalid API endpoint']] }
 
-  # get "/*path", :to => redirect("/?goto=%{path}")
+  
   root "recipes#index"
   resources :recipes
 
@@ -15,6 +11,8 @@ Cookbook::Application.routes.draw do
     get "/recipes(.:format)" => "recipes#index"
     get "/recipes/:id(.:format)" => "recipes#show"
   end
+
+  get "/*path", :to => redirect("/")
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

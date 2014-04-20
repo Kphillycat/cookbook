@@ -11,18 +11,9 @@ recipeApp.controller('RecipeListCtrl', ['$scope', '$http', 'Recipe',
     $scope.showRecipe = function(recipeId){
       $http.get("api/recipes/" + recipeId + '.json').success(function(data) {
         $scope.currentRecipe = data;
-        // $scope.ingredients = data[0].ingredients;
       }); 
     }
     // $scope.recipes = Recipe.query();
 
     // $scope.orderProp = 'name';
   }]);
-
-recipeControllers.controller('RecipeDetailCtrl', ['$scope', '$routeParams', '$http',
-
-    // $scope.setImage = function(imageName) {
-    //   $scope.mainImg = imageName;
-    // }
-  // }
-  ]);
