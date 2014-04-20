@@ -2,10 +2,10 @@
 
 recipeApp.directive('recipeSnippet',function(){
     return function(scope, element, attrs) {
-      scope.$watch('currentRecipe', function(attrs){
+      // scope.$watch('currentRecipe', function(attrs){
         // debugger;
+        // element.find("recipe-detail").toggle();
 
-        element.find("recipe-detail").toggle();
         // if (scope.showDetail){
           // debugger;
           // element.find("recipe-detail").slideDown(2);
@@ -13,7 +13,7 @@ recipeApp.directive('recipeSnippet',function(){
  // .parent().find('td > div').slideDown(2);
         // }
         // element.slideDown(2);
-      })         
+      // });         
     }
   });
 
