@@ -8,8 +8,6 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Description</th>
-      <th>Prep instructions</th>
       <th></th>
       <th></th>
       <th></th>
@@ -19,8 +17,6 @@
   <tbody class="recipes">
     <tr ng-repeat="recipe in recipes | filter:query | orderBy:orderProp" class="recipe" recipe-snippet>
       <td>{{recipe.name}}</td>
-      <td>{{recipe.description}}</td>
-      <td>{{recipe.prep_instructions}}</td>
       <td ng-click="showRecipe(recipe.id)"><a href="#">Click for Details</a></td>
       <td class="recipe_details"><recipe-detail class="hidden"></recipe-detail></td>
     </tr>
