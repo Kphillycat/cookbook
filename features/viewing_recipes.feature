@@ -4,7 +4,7 @@ Feature: Viewing Recipes
   I would like to goto the home page and see all the recipes
 
 @javascript
-  Scenario: 
+  Scenario: Viewing all recipes
     Given There are recipes
     When I'm on the home page
     Then I expect to see all the recipes
