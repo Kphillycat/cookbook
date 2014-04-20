@@ -6,9 +6,10 @@
   
   <ul>
     <li ng-repeat="recipe in recipes | filter:query | orderBy:orderProp" class="recipe" recipe-snippet>
-    <p>{{recipe.name}}</p>
-    <p ng-click="showRecipe(recipe.id)"><a href="#">Click for Details</a></p>
-    <p class="recipe_details"><recipe-detail class="hidden"></recipe-detail></p>
+      <p>{{recipe.name}}</p>
+      <p ng-click="showRecipe(recipe.id)"><a href="#">Click for Details</a></p>
+      <recipe-detail></recipe-detail>
+    </li>
   </ul>
 
 <br>
