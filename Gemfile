@@ -46,3 +46,13 @@ gem 'angularjs-rails'
 
 # Use debugger
 gem 'debugger', group: [:development, :test]
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'pry'
+  gem 'simplecov', '~> 0.7.1', require: false
+  gem 'faker'
+end
