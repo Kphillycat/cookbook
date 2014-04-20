@@ -11,7 +11,10 @@ recipeApp.controller('RecipeListCtrl', ['$scope', '$http', 'Recipe',
     $scope.showRecipe = function(recipeId){
       $http.get("api/recipes/" + recipeId + '.json').success(function(data) {
         $scope.currentRecipe = data;
+        $scope.showDetail = true;
       }); 
+
+      
     }
     // $scope.recipes = Recipe.query();
 

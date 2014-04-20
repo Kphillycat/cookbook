@@ -34,6 +34,7 @@ end
 
 gem 'pg'
 gem 'angularjs-rails'
+gem 'angular-rails-templates'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

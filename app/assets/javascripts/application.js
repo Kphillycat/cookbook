@@ -18,5 +18,6 @@
 //= require angular-route
 //= require app
 //= require_tree ./angular
-//= require_tree .
+//= require_tree ./angular/templates
+//= require_tree . 
 

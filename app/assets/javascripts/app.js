@@ -1,6 +1,6 @@
 'use strict';
 
-var recipeApp = angular.module('recipeApp',['recipeControllers', 'recipeServices', 'ngRoute']);
+var recipeApp = angular.module('recipeApp',['recipeControllers', 'recipeServices', 'ngRoute', 'templates']);
 
 recipeApp.config(['$routeProvider',
   function($routeProvider) {
