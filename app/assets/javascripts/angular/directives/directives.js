@@ -6,3 +6,10 @@ recipeApp.directive('recipeDetail', function() {
         templateUrl: "angular/templates/recipe_detail.html"
     };
 });
+
+recipeApp.filter('fraction', function fractionFilter() {
+  return function(input) {
+    var f = new Fraction(parseFloat(input)); 
+    return f.numerator + "/" + f.denominator;
+  }
+});

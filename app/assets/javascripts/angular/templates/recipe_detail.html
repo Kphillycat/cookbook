@@ -1,3 +1,8 @@
+<head>
+<script src="http://hypervolu.me/~erik/fraction.js/releases/fraction-0.3.js"></script>
+
+</head>
+
 <div class="recipe-details">
 
   <label for="serving-scale">Enter Scaling amount</label>
@@ -20,7 +25,8 @@
 
   <ul class="ingredients">
     <li ng-repeat="ingredient in currentRecipe.ingredients">
-      <p>{{ingredient.quantity * (scale || 1)}} {{ingredient.unit}} of {{ingredient.name}}</p>
+      <fraction-view></fraction-view>
+      <p>{{ingredient.quantity * (scale || 1) | fraction}} {{ingredient.unit}} of {{ingredient.name}}</p>
     </li>
   </ul>
 </div>
