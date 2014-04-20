@@ -8,6 +8,7 @@
     <li ng-repeat="recipe in recipes | filter:query | orderBy:orderProp" class="recipe">
       <p>{{recipe.name}}</p>
       <p ng-click="showRecipe(recipe.id)"><a id="recipe-detail-link">Click to see details below</a></p>
+      <%= link_to 'Edit', "/recipes/{{recipe.id}}/edit" %>
     </li>
   </ul>
 

@@ -2,8 +2,8 @@
 
 var recipeControllers = angular.module('recipeControllers', []);
 
-recipeApp.controller('RecipeListCtrl', ['$scope', '$http', 'Recipe',
-  function($scope, $http, Recipe){
+recipeApp.controller('RecipeListCtrl', ['$scope', '$http', 'Recipe', 'RecipeDetails',
+  function($scope, $http, Recipe, RecipeDetails){
     $scope.recipes = Recipe.query();
     
     $scope.showRecipe = function(recipeId){

@@ -6,3 +6,9 @@ recipeServices.factory('Recipe', ['$resource',
       query: {method: 'GET', params: {}, isArray:true}
     });
   }]);
+
+recipeServices.factory('RecipeDetails', ['$resource', 
+  function($resource){
+    return $resource('/api/recipes/:recipeId.json', {recipeId: 'recipeId'}, {
+      query: {method: 'GET', params: {}, isArray:true}});
+  }]);
