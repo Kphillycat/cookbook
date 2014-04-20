@@ -12,7 +12,7 @@ Cookbook::Application.routes.draw do
     get "/recipes/:id(.:format)" => "recipes#show"
   end
 
-  get "/*path", :to => redirect("/")
+  get "/#", :to => redirect("/")
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
