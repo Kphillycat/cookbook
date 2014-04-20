@@ -5,7 +5,7 @@ class Recipe < ActiveRecord::Base
     recipe = Recipe.new(:name => recipe_params[:name], :description => recipe_params[:description], :prep_instructions => recipe_params[:prep_instructions])
 
     recipe_params[:ingredients][:ingredients].split(",").each do |ingredient|
-      ingredient_match = ingredient.match(/([\d+]?.?\/?\d+) (\w+) (\w+)/)
+      ingredient_match = ingredient.match(/([\d+]?.?\/?\d+) (\w+) (.*)/)
       ingredient_qty = ingredient_match[1].convert_from_fraction if ingredient_match[1].index("/")
       current_ingredient = Ingredient.new(:quantity => ingredient_qty || ingredient_match[1].to_f, :unit => ingredient_match[2], :name => ingredient_match[3])
       recipe.ingredients << current_ingredient     
@@ -17,7 +17,7 @@ class Recipe < ActiveRecord::Base
     self.update(:name => recipe_params[:name], :description => recipe_params[:description], :prep_instructions => recipe_params[:prep_instructions])
     
     recipe_params[:ingredients][:ingredients].split(",").each do |ingredient|
-      ingredient_match = ingredient.match(/([\d+]?.?\/?\d+) (\w+) (\w+)/)
+      ingredient_match = ingredient.match(/([\d+]?.?\/?\d+) (\w+) (.*)/)
       ingredient_qty = ingredient_match[1].convert_from_fraction if ingredient_match[1].index("/")
 
       current_ingredient = Ingredient.new(:quantity => ingredient_qty || ingredient_match[1].to_f, :unit => ingredient_match[2], :name => ingredient_match[3])
