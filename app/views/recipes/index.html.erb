@@ -1,17 +1,19 @@
 <div class="all-recipes" ng-controller="RecipeListCtrl">
-  <h1>All of your Recipes</h1>
+  <div class="recipe-snippet">
+    <h1>All of your Recipes</h1>
 
-  <label>Search:</label>
-  <input id="search" type="text" ng-model="query" />
-  
-  <ul>
-    <li ng-repeat="recipe in recipes | filter:query | orderBy:orderProp" class="recipe">
-      <p>{{recipe.name}}</p>
-      <p ng-click="showRecipe(recipe.id)"><a id="recipe-detail-link">Click to see details below</a></p>
-      <%= link_to 'Edit', "/recipes/{{recipe.id}}/edit" %>
-      <%= link_to 'Delete', "/recipes/{{recipe.id}}",  method: :delete %>
-    </li>
-  </ul>
+    <label>Search:</label>
+    <input id="search" type="text" ng-model="query" />
+    
+    <ul>
+      <li ng-repeat="recipe in recipes | filter:query | orderBy:orderProp" class="recipe">
+        <p>{{recipe.name}}</p>
+        <p ng-click="showRecipe(recipe.id)"><a id="recipe-detail-link">Click to see details below</a></p>
+        <%= link_to 'Edit', "/recipes/{{recipe.id}}/edit" %>
+        <%= link_to 'Delete', "/recipes/{{recipe.id}}",  method: :delete %>
+      </li>
+    </ul>
+  </div>
 
   <recipe-detail></recipe-detail>
 
