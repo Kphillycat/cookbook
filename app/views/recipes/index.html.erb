@@ -9,6 +9,7 @@
       <p>{{recipe.name}}</p>
       <p ng-click="showRecipe(recipe.id)"><a id="recipe-detail-link">Click to see details below</a></p>
       <%= link_to 'Edit', "/recipes/{{recipe.id}}/edit" %>
+      <%= link_to 'Delete', "/recipes/{{recipe.id}}",  method: :delete %>
     </li>
   </ul>
 
