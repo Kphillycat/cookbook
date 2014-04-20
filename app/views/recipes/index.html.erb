@@ -1,6 +1,6 @@
-<div class="all-recipes" ng-controller="RecipeListCtrl">
-  <div class="recipe-snippet">
-    <h1>All of your Recipes</h1>
+<div class="all-recipes row" ng-controller="RecipeListCtrl">
+  <div class="recipe-snippet span4">
+    <h1>Recipe List</h1>
 
     <label>Search:</label>
     <input id="search" type="text" ng-model="query" />
@@ -14,9 +14,13 @@
       </li>
     </ul>
   </div>
-
-  <recipe-detail></recipe-detail>
-
+  <div class="span8">
+    <h1>Recipe Details</h1>
+    <recipe-detail></recipe-detail>
+  </div>
+  
 <br>
 </div>
-<%= link_to 'New Recipe', new_recipe_path %>
+
+<%= link_to 'New Recipe', new_recipe_path, :class => "btn btn-large"%>
+
