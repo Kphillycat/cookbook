@@ -1,31 +1,15 @@
 <div class="all-recipes" ng-controller="RecipeListCtrl">
-<h1>Listing recipes</h1>
+  <h1>Listing recipes</h1>
 
-  <label>Name:</label>
+  <label>Search:</label>
   <input id="search" type="text" ng-model="query" />
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody class="recipes">
-    <tr ng-repeat="recipe in recipes | filter:query | orderBy:orderProp" class="recipe" recipe-snippet>
-      <td>{{recipe.name}}</td>
-      <td ng-click="showRecipe(recipe.id)"><a href="#">Click for Details</a></td>
-      <td class="recipe_details"><recipe-detail class="hidden"></recipe-detail></td>
-    </tr>
-  </tbody>
-</table>
-
-<!-- <div class="hidden"> -->
   
-<!-- </div> -->
+  <ul>
+    <li ng-repeat="recipe in recipes | filter:query | orderBy:orderProp" class="recipe" recipe-snippet>
+    <p>{{recipe.name}}</p>
+    <p ng-click="showRecipe(recipe.id)"><a href="#">Click for Details</a></p>
+    <p class="recipe_details"><recipe-detail class="hidden"></recipe-detail></p>
+  </ul>
 
 <br>
 </div>
